@@ -8,11 +8,17 @@ namespace CW3
         {
             Console.WriteLine("Hello World!");
 
-            int randomNum = newNum(1, 101);
+            Console.WriteLine("Enter a starting number: ");
+            int x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a stopping number: ");
+            int y = Convert.ToInt32(Console.ReadLine());
+
+            int randomNum = newNum(x, y);
             int count = 1;
+            
             while (true)
             {
-                Console.Write("I am thinking of a number between 0 and 100:");
+                Console.Write("I am thinking of a number between " + x + " and " + y + ":");
                 int input = Convert.ToInt32(Console.ReadLine());
                 
                 if (input < randomNum)
